@@ -18,6 +18,10 @@ gameSelector.addEventListener("change",function(){
         case "number-guess":
             NumberGuessGame();
             break;
+        
+        case "bomb-surch":
+            BombSurch();
+            break;
     }
 })
 
@@ -34,6 +38,10 @@ function NumberGuessGame(){
         const userGuess = parseInt(input.value);
         if(userGuess === randomNumber){
             message.textContent = "正解‼"
+        }else if (userGuess > randomNumber){
+            message.textContent = "値が高いよ‼"
+        }else if (userGuess > randomNumber){
+            message.textContent = "値が高いよ‼"
         }else if (userGuess > randomNumber){
             message.textContent = "値が高いよ‼"
         }else{
@@ -55,6 +63,7 @@ function ClickCounterGame(){
     let button1 =document.createElement("button");
     button1.textContent = "+1ボタン"
     
+    //if(count <= 10){//
     let button2 =document.createElement("button");
     button2.textContent = "+10ボタン"
     
@@ -73,8 +82,11 @@ function ClickCounterGame(){
     })
     gameContainer.appendChild(button1);
     gameContainer.appendChild(button2);
+    
     gameContainer.appendChild(counter);
 }
 
+function BombSurch(){
 
+}
 
