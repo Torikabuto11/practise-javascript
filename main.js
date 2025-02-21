@@ -1,3 +1,21 @@
+const gameSelect = document.getElementById(`game-select`)
+const select = document.createElement("select");
+    select.name = "games";
+    select.id = "select";
+    const options =[
+        {value:"",text:"--ゲームを作成してください--"},
+        {value:"clicker",text:"クリッカーゲーム"},
+        {value:"number-guess",text:"数当てゲーム"}
+];
+options.forEach(optionData => {
+    const option = document.createElement("option");
+    option.value=optionData.text;
+    option.textContent = optionData.text;
+    select.appendChild(option);
+
+});
+gameSelector.appendChild(select);
+
 function ClickCounterGame(){
     let count = 0;
 
